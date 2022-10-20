@@ -1,3 +1,6 @@
+/* Hasbi Ardianto Pratama */
+/* NIM : C2C021020 */
+
 # include <iostream>
 # include <conio.h>
 # include <stdlib.h>
@@ -13,10 +16,14 @@ char elemen, aa, bb;
 char stack[20], infiks[20], postfiks[20], stack2[20], hasil[20];
 void delay();
 
+/* Buat prosedur untuk fungsi mengubah warna */
+
 void setcolor(unsigned short color) {
 	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hCon,color);
 }
+
+/* Buat prosedur untuk fungsi yang memggerakkan kursor */
 
 void gotoxy(int x, int y) {
 	HANDLE hConsoleOutput;
@@ -26,6 +33,7 @@ void gotoxy(int x, int y) {
 	hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCursorPosition(hConsoleOutput,dwCursorPosition);
 }
+/* Membuat stack */
 
 int create(int x) {
 	top = 0;
@@ -48,7 +56,7 @@ int create(int x) {
 		}
 	}
 }
-
+/* Menambah elemen */
 int push(char aa) 
 	{
 	gotoxy(50,2);
@@ -77,7 +85,7 @@ int push(char aa)
 		top = top + 1;
 	}
 }
-
+/* Menghapus elemen */
 int pop(){
 	gotoxy(50,2);
 	printf("					");
@@ -106,7 +114,7 @@ int pop(){
 
 	}
 }
-
+/* Pilihan Menu */
 int main() {
 	maks = 0;
 	top = 0;
